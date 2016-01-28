@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Demo</string>
+
+    <string name="hello_world">你好，安卓</string>
+    <string name="action_settings">设置</string>
+    <string name="title_activity_notification_demo">通知</string>
+    <string name="string_notification_text">吓死宝宝了</string>
+    <string name="string_notification_title">通知标题</string>
+    <string name="string_down_title">正在下载</string>
+    <string name="string_down_succ">下载完成</string>
+    <string name="string_down_text">请稍后</string>
+    <string name="bt_simple_notification">简单通知</string>
+    <string name="bt_bigger_notification">更大的通知</string>
+    <string name="bt_progress_notification">进度条通知</string>
+    <string name="bt_custom_notification">自定义通知</string>
+    <string name="bt_cancel_notification">取消所有通知</string>
+    <string name="string_notification_result">圣诞快乐</string>
+    <string name="string_msg_to">收件人</string>
+    <string name="string_msg_from">发件人</string>
+    <string name="string_msg_content">正文</string>
+    <string name="bt_sms_send">发送</string>
+    <string name="bt_camera_capture">拍摄</string>
+    <string name="bt_camera_custom">自定义相机</string>
+    <string name="bt_camera_gallery">相册</string>
+    <string name="bt_camera_crop">裁剪</string>
+    <string name="bt_service_intent">Start intent service</string>
+
+</resources>
