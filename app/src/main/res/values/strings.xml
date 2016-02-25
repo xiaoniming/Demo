@@ -8,5 +8,6 @@
     <string name="title_activity_camera_custom">CameraCustom</string>
     <string name="title_activity_music">MusicPlayer</string>
     <string name="title_activity_intent_service">IntentServiceActivity</string>
+    <string name="title_activity_animation">AnimationActivity</string>
 
 </resources>

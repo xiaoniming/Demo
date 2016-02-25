@@ -1,11 +1,11 @@
 package com.seu.ni.demo.GraphicsAndAnimation;
 
 /**
- * Created by ni on 2016/2/24.
+ * Created by ni on 2016/2/25.
  */
-public interface AnimCallBack {
-     void onChangeAlpha();
-     void onChangeScale();
-     void onChangeRotate();
-     void onChangeTranslate();
+public interface AnimCallback {
+    void onChangeAlpha();
+    void onChangeScale();
+    void onChangeTranslate();
+    void onChangeRotate();
 }

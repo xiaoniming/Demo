@@ -67,20 +67,25 @@
             android:exported="true">
         </service>
 
-
         <activity
             android:name=".Service.ServiceDemo"
             android:label="@string/title_activity_intent_service">
+        </activity>
+
+        <service
+            android:name=".Service.IntentServiceDemo"
+            android:exported="false">
+        </service>
+
+        <activity
+            android:name=".GraphicsAndAnimation.AnimationActivity"
+            android:label="@string/title_activity_animation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <service
-            android:name=".Service.IntentServiceDemo"
-            android:exported="false">
-        </service>
     </application>
 
 </manifest>
