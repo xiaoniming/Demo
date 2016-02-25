@@ -44,7 +44,7 @@ public class AnimationView extends View implements Animation.AnimationListener {
 
         int height = View.MeasureSpec.getSize(heightMeasureSpec);
         int width = View.MeasureSpec.getSize(widthMeasureSpec);
-        setMeasuredDimension(measureWidth(width),measureHeight(height));
+        setMeasuredDimension(measureWidth(width), measureHeight(height));
     }
 
     @Override
@@ -114,7 +114,6 @@ public class AnimationView extends View implements Animation.AnimationListener {
                 break;
             case 4:
                 anim = new RotateAnimation(0,368f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-
                 break;
             default:
                 break;

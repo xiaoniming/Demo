@@ -68,6 +68,7 @@ public class AnimationActivity extends AppCompatActivity implements View.OnClick
             case R.id.bt_anim_rotate:
                 type = 4;
                 mAnimation = AnimationUtils.loadAnimation(this, R.anim.anim_rotate);
+
                 break;
 
             default:
