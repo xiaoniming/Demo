@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -19,6 +20,7 @@ import com.seu.ni.demo.R;
 
 /**
  * Created by ni on 2016/2/24.
+ * custom view used to perform animation by java code
  */
 public class AnimationView extends View implements Animation.AnimationListener {
 
@@ -34,9 +36,34 @@ public class AnimationView extends View implements Animation.AnimationListener {
         setFocusable(true);
     }
 
-    public <T> void L(T para) {
-        Log.v("-----Anim", para + "");
+    public AnimationView(Context context, AttributeSet attrs) {
+        super(context, null);
     }
+
+    public void onChangeAnim(int type) {
+        Animation anim = null;
+        switch (type) {
+            case 1:
+                anim = new AlphaAnimation(0f, 1f);
+                break;
+            case 2:
+                anim = new ScaleAnimation(0f, 1f, 0f, 1f, Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF,
+                        0.5f);
+                break;
+            case 3:
+                anim = new TranslateAnimation(0, 100, 0, 100);
+                break;
+            case 4:
+                anim = new RotateAnimation(0, 368f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                break;
+            default:
+                break;
+        }
+        anim.setDuration(5000);
+        anim.setFillAfter(true);
+        this.startAnimation(anim);
+    }
+
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -53,6 +80,10 @@ public class AnimationView extends View implements Animation.AnimationListener {
         canvas.drawBitmap(mPic, getPaddingLeft(), getPaddingTop(), mPaint);
     }
 
+    /**
+     * @param measureSpec widthMeasureSpec from onMeasure
+     * @return measured weight
+     */
     private int measureWidth(int measureSpec) {
         int result = 0;
         int specMode = View.MeasureSpec.getMode(measureSpec);
@@ -71,6 +102,11 @@ public class AnimationView extends View implements Animation.AnimationListener {
         }
         return result;
     }
+
+    /**
+     * @param measureSpec heightMeasureSpec from onMeasure
+     * @return measured height
+     */
     private int measureHeight(int measureSpec) {
         int result = getSuggestedMinimumHeight();
         int specMode = View.MeasureSpec.getMode(measureSpec);
@@ -99,33 +135,6 @@ public class AnimationView extends View implements Animation.AnimationListener {
         return mPic.getHeight();
     }
 
-    public void onChangeAnim(int type) {
-        Animation anim = null;
-        switch (type) {
-            case 1:
-                anim = new AlphaAnimation(0f, 1f);
-                break;
-            case 2:
-                anim = new ScaleAnimation(0f, 1f, 0f, 1f, Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF,
-                        0.5f);
-                break;
-            case 3:
-                anim = new TranslateAnimation(0, 100, 0, 100);
-                break;
-            case 4:
-                anim = new RotateAnimation(0,368f,Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
-                break;
-            default:
-                break;
-        }
-
-//        AlphaAnimation mAnimation = new AlphaAnimation(0.1f, 1.0f);
-        anim.setDuration(5000);
-        anim.setFillAfter(true);
-        this.startAnimation(anim);
-
-    }
-
 
     @Override
     public void onAnimationStart(Animation animation) {
@@ -152,5 +161,7 @@ public class AnimationView extends View implements Animation.AnimationListener {
         return bitmap;
     }
 
-
+    public <T> void L(T para) {
+        Log.v("-----Anim", para + "");
+    }
 }
