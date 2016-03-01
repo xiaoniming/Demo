@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.seu.ni.demo.UI.ViewPager.SwipeView">
+    tools:context="com.seu.ni.demo.UI.SwipView.SwipeView">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/id_view_pager"

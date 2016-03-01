@@ -9,5 +9,9 @@
     <string name="title_activity_music">MusicPlayer</string>
     <string name="title_activity_intent_service">IntentServiceActivity</string>
     <string name="title_activity_animation">AnimationActivity</string>
+    <string name="title_activity_fragment">FragmentActivity</string>
+    <string name="title_activity_swipview">SwipViewActivity</string>
+    <string name="title_activity_custom_swipe_selector">CustomSwipeSelector</string>
+    <string name="title_activity_property_animation">PropertyAnimation</string>
 
 </resources>

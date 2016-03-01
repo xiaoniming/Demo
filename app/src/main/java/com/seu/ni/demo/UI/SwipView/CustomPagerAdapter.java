@@ -1,4 +1,4 @@
-package com.seu.ni.demo.UI.ViewPager;
+package com.seu.ni.demo.UI.SwipView;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -12,11 +12,11 @@ import com.seu.ni.demo.UI.Fragment.FragmentChildB;
  * Created by Ni on 2016/2/6.
  */
 // Here we use FragmentPagerAdapter from package "android.support.v13.app",
-// for FragmentPagerAdapter is not in Android.app, it can be found in v4 and v13
+// for FragmentPagerAdapter is not in Android.app, it can only be found in v4 and v13
 // if we use v4.FragmentPagerAdapter, then constructor parament: FragmentManager must be v4.FragmentManager
 
-public class DemoPagerAdapter  extends FragmentPagerAdapter{
-    public DemoPagerAdapter(FragmentManager fm) {
+public class CustomPagerAdapter extends FragmentPagerAdapter{
+    public CustomPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 

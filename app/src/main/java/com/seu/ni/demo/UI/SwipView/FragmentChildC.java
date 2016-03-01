@@ -1,4 +1,4 @@
-package com.seu.ni.demo.UI.ViewPager;
+package com.seu.ni.demo.UI.SwipView;
 
 import android.app.Fragment;
 import android.os.Bundle;

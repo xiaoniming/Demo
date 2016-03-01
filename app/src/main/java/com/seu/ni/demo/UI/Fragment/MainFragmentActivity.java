@@ -39,7 +39,6 @@ public class MainFragmentActivity extends Activity {
             public void onClick(View v) {
                 FragmentTransaction transaction = mFragmentManager.beginTransaction();
                 transaction.replace(R.id.id_fragment_content, mFramgB);
-                transaction.addToBackStack(null);
                 transaction.commit();
             }
         });
