@@ -14,5 +14,6 @@
     <string name="title_activity_custom_swipe_selector">CustomSwipeSelector</string>
     <string name="title_activity_property_animation">PropertyAnimation</string>
     <string name="title_activity_web_view">WebViewActivity</string>
+    <string name="title_activity_custom_view">CustomViewActivity</string>
 
 </resources>
