@@ -1,10 +1,13 @@
 package com.seu.ni.demo.GraphicsAndAnimation;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -17,6 +20,7 @@ public class AnimationActivity extends AppCompatActivity implements View.OnClick
     private ImageView mPic, mLoadingPic;
     private AnimationView mView;
     private Animation mAnimation;
+    private ObjectAnimator mObjectAnimator;
     private Button mChangeAlpha, mChangeScale, mChangeTranslate, mChangeRotate, mLoading;
 
     @Override
@@ -25,6 +29,8 @@ public class AnimationActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_animation);
         initView();
         initData();
+        AnimationSet animationSet;
+        AnimatorSet animatorSet;
     }
 
     private void initView() {

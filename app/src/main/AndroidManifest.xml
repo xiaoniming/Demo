@@ -82,6 +82,11 @@
         <activity
             android:name=".GraphicsAndAnimation.AnimationActivity"
             android:label="@string/title_activity_animation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".UI.Fragment.MainFragmentActivity"
@@ -107,11 +112,7 @@
         <activity
             android:name=".UI.CustomView.CustomViewActivity"
             android:label="@string/title_activity_custom_view" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -154,10 +154,10 @@ public class AnimationView extends View implements Animation.AnimationListener {
     }
 
     private Bitmap getPic() {
-        Matrix m = new Matrix();
-        m.postScale(0.2f, 0.2f);
+        Matrix matrix = new Matrix();
+        matrix.postScale(0.2f, 0.2f);
         Bitmap origin = BitmapFactory.decodeResource(this.getResources(), R.drawable.pic_qiaoba);
-        Bitmap bitmap = Bitmap.createBitmap(origin, 0, 0, origin.getWidth(), origin.getHeight(), m, true);
+        Bitmap bitmap = Bitmap.createBitmap(origin, 0, 0, origin.getWidth(), origin.getHeight(), matrix, true);
         return bitmap;
     }
 
