@@ -31,6 +31,8 @@ public class AnimationActivity extends AppCompatActivity implements View.OnClick
         initData();
         AnimationSet animationSet;
         AnimatorSet animatorSet;
+
+
     }
 
     private void initView() {
