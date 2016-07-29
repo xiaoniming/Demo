@@ -2,6 +2,7 @@ package com.seu.ni.demo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -11,9 +12,51 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        L("onCreate");
 
 
+    }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        L("onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        L("onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        L("onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        L("onStop");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        L("onRestart");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        L("onDestroy");
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        L("onWindowFocusChanged");
     }
 
     @Override
@@ -37,4 +80,8 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public static  void L(String s){
+        Log.v("MainActivity-----> ",s);
+    }
+
 }
